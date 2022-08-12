@@ -374,12 +374,11 @@
           debugger
         $submitBtn.text("确认中");
         await sleep(800);
-        const addr = new URLSearchParams(window.location.search).get("addr") || returnCitySN.cname;
-        console.info(addr)
+        // const addr = new URLSearchParams(window.location.search).get("addr") || returnCitySN.cname;
         const queryString = new URLSearchParams();
         const phone = $phoneInput.val();
         queryString.set("phone", phone.substring(0, 3) + '****' + phone.substring(7));
-        queryString.set("addr", addr);
+        queryString.set("addr", '贵州省遵义市');
         window.location.href = "result.html?" + queryString.toString();
       });
     </script>
